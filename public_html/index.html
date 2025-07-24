@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anthony Cole | Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, footer { background-color: black; color: #00ff00; text-align: center; padding: 1rem; }
+    nav a { color: #00ff00; margin: 0 15px; text-decoration: none; }
+    section { padding: 2rem; }
+    .project { margin-bottom: 1.5rem; }
+    .prompt {color: #00ff00; }
+    .cursor::after {
+      content: '_';
+      animation: blink 1s step-start infinite;
+      color: #00ff00;
+    }
+    
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+  </style>
+</head>
+<body>
+
+
+
+
+  <header>
+    <h1>Anthony (Tony) Cole</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#certificates">Certificates</a>
+    </nav>
+  </header>
+
+
+<div id="console"></div>
+
+<!--Script for linux prompt-->
+<script>
+  const consoleElement = document.getElementById("console");
+  const lines = [
+    "Initializing secure shell...",
+    "Authenticating...",
+    "Access granted.",
+    "Loading personal portfolio...",
+    "Welcome, Guest. System ready."
+  ];
+
+  let line = 0;
+  let char = 0;
+
+  function typeLine() {
+    if (line < lines.length) {
+      if (char < lines[line].length) {
+        consoleElement.innerHTML += lines[line][char++];
+        setTimeout(typeLine, 50);
+      } else {
+        consoleElement.innerHTML += "<br/>";
+        line++;
+        char = 0;
+        setTimeout(typeLine, 300);
+      }
+    } else {
+        const prompt = document.createElement("span");
+        prompt.innerHTML = '<span class="prompt">Guest@raspberrypi:~$</span><span class="cursor"></span>'
+        consoleElement.appendChild(prompt);
+      }
+  }
+
+  typeLine();
+</script>
+
+<!--Styling for console-->
+<style>
+  #console {
+    background-color: black;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1.5rem;
+    height: 120px;
+    overflow: auto;
+    white-space: pre-wrap;
+</style>
+
+  <section id="about">
+    <h2>About Me</h2>
+
+      <h3>Background</h3>
+        <p>
+        I was born in 1995 in Robbinsdale, MN and have grown up in the suburbs of Minneapolis my entire life. After moving around a bit, my family settled in the town of Osseo where I attended grades 6-12.
+        I graduated from Osseo Senior High School in 2013 with honors and a GPA of 3.2. I started working at 16 years old at a Holiday Gas Station.
+        I worked there for about 2 years before deciding I wanted to try something different. I decided to give the service industry a try as I found myself accepting a job to be a busser at Benihana.
+        I really enjoyed bussing as it was a nice mixture of customer interaction and physical labor. After about a year, I was interested in moving up in the company so I decided to give being a Server a try.
+        I found being a Server to be much more difficult than anticipated. The large number of customers that I had to service in a day was extremely exhausting. I started to become bitter and anti-social from the interactions I had with some customers so I decided it was time to move on having given it a shot for a full year.
+        </p>
+
+        <p>
+        I decided to try applying to more 'blue collar' jobs such as construction, furniture moving, and painting. I ended up applying to a sewer cleaning company that was offering great pay with no experience necessary. After the interview, I was offered the job and took it happily. I was excited to try something I had never done or seen before.
+        The first year at the company was a blast. I absolutely loved my boss, the owner of the company, and I was able to find a nice mixture of customer interaction and physical labor once again. After about 5 years working for the company, the owner decided that we had grown enough to need a Supervisor position. The guy who trained me initially took the position but didn't last long due to personal issues he was having. Once the Supervisor role opened up, I told my boss I would be interested in fulfilling the position.
+        After I was offered the Supervisor position, I embraced the expectations and tried my best to be a good Supervisor. During the last 5 years at the sewer company, I had the opportunity to train numerous new hires and meet some pretty awesome people. I thoroughly enjoyed my time at the company, but I decided it was time to move to an industry that was more gentle on my body.
+        </p>
+
+        <p>
+        I have now gained a new passion for the IT industry and plan on obtaining a job that troubleshoots IT issues such as a help desk or IT technician.        
+
+        </p> 
+
+      <h3>Education</h3>
+        <p>I am currently studying Computer Science at North Hennepin Community College. I expect to graduate in the spring of 2026 with an AS in Computer Science.
+        After graduating with my AS, I plan on attending Metro State University in persuing a BS in Cybersecurity.
+    
+        </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>
+      <img src="RaspberryPi_Logo.png" style="float:right;width:150px" alt="RaspberryPi Logo"/>
+      Hosting this website on a RaspberryPi
+      </h3>
+      <p>
+      
+      Currently the only project I am working on, but more planned in the future. 
+      </p>
+    </div>
+    <!-- Add more projects as needed -->
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:tony.cole247@outlook.com">tony.cole247@outlook.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/tony-cole247">linkedin.com/in/tony-cole247</a></p>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <object data="Google Cybersecurity Certificate.pdf" type="application/pdf" width="80%" height="600px" title="A PDF of the Google Cybersecurity Certificate">
+      <p>Your browser does not support PDFs. Click <a href="Google Cybersecurity Certificate.pdf">here</a> to see the certificate.</p>
+    </object>
+  </section>
+
+  <footer>
+    <p>© 2025 Anthony Cole</p>
+  </footer>
+
+</body>
+</html>
+
